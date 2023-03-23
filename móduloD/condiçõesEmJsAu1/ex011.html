@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro?</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    Seu país é: <input type="text" id="text"> <input type="button" value="Verificar" onclick="descobrir()">
+    <div id="res"></div>
+
+    <script>
+        function descobrir() {
+            var pais = window.document.querySelector('input#text')
+            var res = window.document.querySelector('div#res')
+            var p = (pais.value)
+            if(p == 'Brasil'){
+                res.innerHTML += '<p><strong>Brasileiro</strong></p>'
+            }else{
+                res.innerHTML += '<p>Você não é brasileiro!</p>'
+            }
+            res.innerHTML += '<p>Obrigado por participar!</p>'
+        }
+    </script>
+</body>
+</html>
